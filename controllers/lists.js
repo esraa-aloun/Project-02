@@ -55,11 +55,11 @@ exports.list_addItem_post = (req, res) => {
 
 exports.list_show_get = (req, res) => {
 
-    Item.find().populate('User')
+    Item.find().populate('owner')
 
     
     .then(list => {
-       console.log(list)
+      // console.log(list)
        res.render('lists/show', {list})
 
     })
@@ -68,3 +68,49 @@ exports.list_show_get = (req, res) => {
     })
 
 }
+
+exports.list_editItem_get =(req, res) =>{
+   let itemID = req.query.id
+   console.log('item id',itemID)
+   Item.findById(itemID)
+   .then(item => {
+    //console.log(list)
+    res.render('lists/edit', {item})
+
+ })
+   .catch( err => {
+    console.log('err')
+})
+  
+}
+
+exports.list_editItem_post =(req, res) =>{
+
+    let itemId = req.body.id
+    console.log('item post',itemId)
+    Item.findByIdAndUpdate(itemId, req.body)
+    .then(()=> {
+      
+        res.redirect('/lists/show')
+    
+     })
+       .catch( err => {
+        console.log('err')
+    })
+   
+   
+ }
+
+ exports.list_deleteItem_get=(req, res) => {
+    let itemID = req.query.id
+    Item.findByIdAndDelete(itemID)
+    .then(()=> {
+      
+        res.redirect('/lists/show')
+    
+     })
+       .catch( err => {
+        console.log('err')
+    })
+   
+ }
