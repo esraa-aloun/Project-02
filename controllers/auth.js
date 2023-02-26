@@ -1,5 +1,6 @@
 
 const User = require('../models/user')
+const List = require('../models/list')
 const bcrypt = require('bcrypt')
 const passport = require('../lib/passportConfig')
 
@@ -7,19 +8,32 @@ const passport = require('../lib/passportConfig')
 exports.auth_signup_get = (req, res) => {
     res.render('auth/signup')
 }
+
 exports.auth_signup_post = (req, res) => {
+    
     let user = new User(req.body)
     console.log(user.firstName)
     let hash = bcrypt.hashSync(req.body.password, 10)
     console.log(hash)
     user.password = hash
     user.save()
-    .then(() => {
+
+    .then((user) => {
+        let userId = user._id
+        let list = new List({owner: userId})
+        list.save()
         res.redirect('/auth/signin')
+
     })
     .catch((err) => {
         console.log('err')
     })
+    
+    
+
+    
+
+
 }
 
 exports.auth_signin_get = (req, res) => {
