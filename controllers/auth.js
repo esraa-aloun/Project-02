@@ -70,7 +70,17 @@ exports.auth_changepassword_get = (req, res) =>{
 
 exports.auth_changepassword_post = (req, res) =>{
     let currentPassword = req.body.currentPassword
+<<<<<<< HEAD
     console.log(currentPassword)
+=======
+    //console.log('current',currentPassword)
+  
+    let newPassword = req.body.newPassword
+    console.log(newPassword)
+    let hash = bcrypt.hashSync(newPassword, 10)
+     console.log('hah2', hash)
+    
+>>>>>>> 60041d87d6a7e4b204d2794dae9ef48392fbf55b
   
     // let newPassword = req.body.newPassword
 
@@ -80,8 +90,34 @@ exports.auth_changepassword_post = (req, res) =>{
     // let hash = bcrypt.hashSync(currentPassword, 10)
 
 
+<<<<<<< HEAD
     //test
     let verify = bcrypt.compareSync(currentPassword, DBPassword)
+=======
+    User.findById(req.user._id)
+    .then((user) => {
+        DBPassword = user.password    
+        //console.log('DB',DBPassword)
+       
+        
+        //test
+        let verify = bcrypt.compareSync(currentPassword , DBPassword)
+    
+        if (verify === false) {
+            res.status(400).send('Invalid Password')
+        } else {
+            console.log('hah2', hash)
+            User.findByIdAndUpdate(req.user._id , {password : hash})
+            .then(() => {
+
+                res.render("/profiles/show")
+            })
+            .catch(() => {
+                console.log('err2')
+            })
+           
+        }
+>>>>>>> 60041d87d6a7e4b204d2794dae9ef48392fbf55b
 
     if (verify === false) {
         res.status(400).send('Invalid Password')
