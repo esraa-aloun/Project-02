@@ -44,13 +44,7 @@ exports.auth_signup_post = (req, res) => {
     })
     .catch((err) => {
         console.log('err')
-    })
-    
-    
-
-    
-
-
+    }) 
 }
 
 exports.auth_signin_get = (req, res) => {
@@ -70,29 +64,42 @@ exports.auth_signout_get = (req, res) => {
 }
 
 exports.auth_changepassword_get = (req, res) =>{
-    res.redirect('/auth/changepassword')
+    res.render('auth/changepassword')
 }
 
 exports.auth_changepassword_post = (req, res) =>{
+
+    
+
     let currentPassword = req.body.currentPassword
-    console.log(currentPassword)
+    //console.log('current',currentPassword)
   
-    // let newPassword = req.body.newPassword
-
-    let user = User.findById(req.user._id)
-    DBPassword = user.password
-    console.log(DBPassword)
-    // let hash = bcrypt.hashSync(currentPassword, 10)
+    let newPassword = req.body.newPassword
+    let hash = bcrypt.hashSync(newPassword, 10)
+  
 
 
-    //test
-    let verify = bcrypt.compareSync(currentPassword, DBPassword)
+    User.findById(req.user._id)
+    .then((user) => {
+        DBPassword = user.password    
+        //console.log('DB',DBPassword)
+       
+        
+        //test
+        let verify = bcrypt.compareSync(currentPassword , DBPassword)
+    
+        if (verify === false) {
+            res.status(400).send('Invalid Password')
+        } else {
+            
+            res.send("It's a match!")
+        }
 
-    if (verify === false) {
-        res.status(400).send('Invalid Password')
-    } else {
-        res.send("It's a match!")
-    }
+    })
+    .catch(()=>{
+        console.log('err')
+    })
+   
 }
 
 
