@@ -75,7 +75,10 @@ exports.auth_changepassword_post = (req, res) =>{
     //console.log('current',currentPassword)
   
     let newPassword = req.body.newPassword
+    console.log(newPassword)
     let hash = bcrypt.hashSync(newPassword, 10)
+     console.log('hah2', hash)
+    
   
 
 
@@ -91,8 +94,16 @@ exports.auth_changepassword_post = (req, res) =>{
         if (verify === false) {
             res.status(400).send('Invalid Password')
         } else {
-            
-            res.send("It's a match!")
+            console.log('hah2', hash)
+            User.findByIdAndUpdate(req.user._id , {password : hash})
+            .then(() => {
+
+                res.render("/profiles/show")
+            })
+            .catch(() => {
+                console.log('err2')
+            })
+           
         }
 
     })
