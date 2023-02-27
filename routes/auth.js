@@ -14,6 +14,9 @@ router.post('/auth/signin', authCtrl.auth_signin_post)
 
 router.get('/auth/signout', authCtrl.auth_signout_get)
 
+router.get('/auth/changePassword', authCtrl.auth_changepassword_get)
+router.post('/auth/changePassword', authCtrl.auth_changepassword_post)
+
 
 
 module.exports = router
