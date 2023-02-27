@@ -1,0 +1,18 @@
+<table style="border: 1px solid black;">
+    <tr style="text-align: left;">
+        <th>Drama Name</th>
+        <th>Episode Num</th>
+    </tr>
+    <% list.forEach(element => { %>
+ 
+    <tr>
+        <td style="width: 200px;"><%= element.dramaName%></td>
+        <td style="width: 200px;"><%= element.episodeNum%></td>
+        <td style="width: 200px;"><%= element._id%></td>
+        <td style="width: 200px;"><a href="/lists/edit?id=<%= element._id %>"><button >Edit</button></a></td>
+        <td style="width: 200px;"><a href="/lists/delete?id=<%= element._id %>"><button >Delete</button></a></td>
+    </tr>
+
+           
+   <% }); %>
+</table>
