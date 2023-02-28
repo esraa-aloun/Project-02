@@ -1,18 +1,232 @@
-<table style="border: 1px solid black;">
-    <tr style="text-align: left;">
-        <th>Drama Name</th>
-        <th>Episode Num</th>
-    </tr>
-    <% list.forEach(element => { %>
- 
-    <tr>
-        <td style="width: 200px;"><%= element.dramaName%></td>
-        <td style="width: 200px;"><%= element.episodeNum%></td>
-        <td style="width: 200px;"><%= element._id%></td>
-        <td style="width: 200px;"><a href="/lists/edit?id=<%= element._id %>"><button >Edit</button></a></td>
-        <td style="width: 200px;"><a href="/lists/delete?id=<%= element._id %>"><button >Delete</button></a></td>
-    </tr>
+<!-- <style>
+body {
+  background-color: #fdf1ec;
+}
 
-           
-   <% }); %>
-</table>
+.wrapper {
+  height: 420px;
+  width: 800px;
+  margin: 50px auto;
+  border-radius: 10px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+}
+
+.product-img img {
+  border-radius: 10px 0 0 10px;
+}
+
+.product-info {
+  float: right;
+  height: 420px;
+  width: 473px;
+  border-radius: 0 10px 10px 0px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: 'Bentham', serif;
+}
+
+.product-text h2 {
+  margin: 0 0 47px 38px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 34px;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #9cebd5;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: #79b0a1;
+}
+
+
+</style>
+ -->
+
+<style>
+
+.cardcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 0px 20px 0px ;
+}    
+.card {
+ width: 190px;
+ height: 254px;
+ position: relative;
+ background: #f5f5f5;
+ transition: box-shadow .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ margin: 30px;
+}
+
+.card-img {
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ /* background-color: #fffafa; */
+}
+
+.card-info {
+ position: absolute;
+ width: 100%;
+ bottom: 0;
+ padding: 1rem;
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+}
+
+.card-icon {
+ opacity: 0;
+ transform: translateX(-20%);
+ width: 2em;
+ height: 2em;
+ transition: all .3s ease-in-out;
+}
+
+svg {
+ --size: 20px;
+ width: var(--size);
+ height: var(--size);
+}
+
+/*Text*/
+p {
+ line-height: 100%;
+}
+
+.text-title {
+ color: #000000;
+ font-weight: 900;
+ font-size: 18px;
+}
+
+.text-subtitle {
+ color: rgb(24, 24, 24);
+ font-weight: 500;
+ font-size: 12px;
+}
+
+/*Hover*/
+.card:hover {
+ box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
+}
+
+.card:hover .card-icon {
+ opacity: 1;
+ transform: translateX(20%);
+}
+</style>
+
+
+
+<!-- ====================================================================== -->
+
+
+
+<div class="cardcontainer">
+
+    <% list.forEach(element => { %>
+  <div class="card" >
+    <div class="card-img">
+ 
+    </div>
+      <div class="card-info" >
+        <div class="card-text">
+          <p class="text-title"><%= element.dramaName%></p>
+          <p class="text-subtitle">Currently Watching</p>
+        </div>
+        <div class="card-icon">
+          <svg viewBox="0 0 28 25">
+            <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <% }); %>
+
+
+</div>
