@@ -1,5 +1,8 @@
 
 <h1>Profile</h1>
+<!-- <img src="public/images/<%= //profile.img %>"> -->
+<!-- <img src="/images/<%=// profile.img %>"> -->
+<img src="/images/profile-pic-1677572505462-477116336.jpg">
 
 <form method="POST" action="/profiles/edit">
 <div>
@@ -30,3 +33,8 @@
 </form>
 
 <a href="/auth/changepassword"><button>Change Password</button></a>
+
+<form method="POST" action="/profile/addImg" enctype="multipart/form-data">
+    <input type="file"  name="profile-pic">
+    <button type="submit" > Upload</button>
+</form>

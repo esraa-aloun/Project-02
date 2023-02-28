@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   }))
 app.use(bodyParser.json())
 app.use(cookieParser());
-
+app.use(express.static('public'))
 
 
 //Initilize Express Layout

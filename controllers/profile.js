@@ -28,3 +28,14 @@ exports.profile_edit_post = (req ,res) => {
         console.log(err)
     })
 }
+
+exports.profile_upload_post = (req, res) => {
+    User.findByIdAndUpdate(req.user._id, {img : req.file.filename})
+    .then(()=>{
+        res.redirect('/profiles/show')
+    })
+    .catch(()=>{
+        console.log('err')
+    }
+    )
+}

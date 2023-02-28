@@ -1,5 +1,7 @@
 const Item = require('../models/Item')
 const User = require('../models/user')
+const multer = require('multer')
+const upload = multer({dest: 'public/uploads'})
 //const List = require('../models/List')
 
 exports.list_addItem_get = (req, res) => {
@@ -114,3 +116,9 @@ exports.list_editItem_post =(req, res) =>{
     })
    
  }
+
+
+ 
+exports.list_addImg_post = (req, res) =>{
+    console.log(req.file)
+}
