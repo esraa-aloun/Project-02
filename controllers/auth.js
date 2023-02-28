@@ -98,7 +98,7 @@ exports.auth_changepassword_post = (req, res) =>{
             User.findByIdAndUpdate(req.user._id , {password : hash})
             .then(() => {
 
-                res.render("/profiles/show")
+                res.render("profiles/show")
             })
             .catch(() => {
                 console.log('err2')
