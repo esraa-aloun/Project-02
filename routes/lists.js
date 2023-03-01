@@ -14,6 +14,10 @@ router.get('/lists/edit', listCtrl.list_editItem_get)
 router.post('/lists/edit', listCtrl.list_editItem_post)
 router.get('/lists/delete', listCtrl.list_deleteItem_get)
 
+router.get('/lists/showDetails', listCtrl.list_showDetails_get)
+
+router.post('/lists/rating', listCtrl.list_rating_post)
+
 
 
 

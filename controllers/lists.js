@@ -57,6 +57,7 @@ exports.list_addItem_post = (req, res) => {
 
 exports.list_show_get = (req, res) => {
 
+
     Item.find().populate('owner')
 
     
@@ -91,9 +92,9 @@ exports.list_editItem_post =(req, res) =>{
     let itemId = req.body.id
     console.log('item post',itemId)
     Item.findByIdAndUpdate(itemId, req.body)
-    .then(()=> {
+    .then((item)=> {
       
-        res.redirect('/lists/show')
+        res.redirect('/lists/show',{item})
     
      })
        .catch( err => {
@@ -121,4 +122,25 @@ exports.list_editItem_post =(req, res) =>{
  
 exports.list_addImg_post = (req, res) =>{
     console.log(req.file)
+}
+
+exports.list_showDetails_get =(req, res) =>{
+
+    Item.findById(req.query.id)
+    .then((item)=>{
+        res.render('lists/showDetails',{item})
+    })
+    .catch(()=>{
+        console.log('err')
+    })
+}
+
+exports.list_rating_post = (req, res) => {
+    Item.findByIdAndUpdate(req.body.itemid, {score: req.body.rate})
+    .then((item) =>{
+        res.render('lists/showDetails',{item})
+    })
+    .catch(()=>{
+        console.log('err')
+    })
 }

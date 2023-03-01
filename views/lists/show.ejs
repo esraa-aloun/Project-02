@@ -209,7 +209,7 @@ p {
 <div class="cardcontainer">
 
     <% list.forEach(element => { %>
-  <div class="card" >
+  <div class="card"  style="background-image: url('/images/<%= element.image %>');">
     <div class="card-img">
  
     </div>
@@ -219,9 +219,11 @@ p {
           <p class="text-subtitle">Currently Watching</p>
         </div>
         <div class="card-icon">
+          <a href="/lists/showDetails?id=<%= element._id %>">
           <svg viewBox="0 0 28 25">
             <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
           </svg>
+        </a>
         </div>
       </div>
     </div>
