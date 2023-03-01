@@ -11,7 +11,6 @@
 
 
 
-<h2 class="heading">My Profile</h2>
 <!-- <img src="/images/<%= profile.img %>"> -->
 <!-- 
 <form method="POST" action="/profiles/edit">
@@ -110,6 +109,7 @@
       left: 0;
       color: #fff;
       font-size: 12px;
+      
     }
     
     .login-box form a {
@@ -124,13 +124,16 @@
       overflow: hidden;
       transition: .5s;
       margin-top: 40px;
-      letter-spacing: 3px
+      letter-spacing: 3px;
+      cursor: pointer;
+
     }
     
     .login-box a:hover {
-      background: #fff;
+      /* background: #fff; */
       color: #272727;
       border-radius: 5px;
+      cursor: pointer;
     }
     
     .login-box a span {
@@ -261,7 +264,7 @@
     }
 
     .circle-image{
-    display: inline-block;
+    /* display: inline-block; */
     overflow: hidden;
     width: 25%;
     padding-bottom: 25%;
@@ -284,6 +287,7 @@
     
 
 
+    <h2 class="heading">My Profile</h2>
 
 <div class="login-box" style="margin-top: 65px;">
     <form class="row g-3" method="POST" action="/profiles/edit">

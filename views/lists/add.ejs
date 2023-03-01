@@ -45,7 +45,7 @@
     }
     .add-box {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       width: 400px;
       padding: 40px;
@@ -232,6 +232,22 @@
         color: black;
         font-weight: 700;
     }
+
+
+    .fullDramaStat {
+        margin-bottom: 5% ;
+
+    }
+    
+    .dramaStat {
+        position: relative;
+        left: 50%;
+        top: 30%;
+        margin-bottom: 10% ;
+
+
+    }
+
 </style>
 
 
@@ -254,6 +270,24 @@
         <input required="" name="progress" type="number">
         <label>Progress</label>
       </div>
+
+      <div class="user-box" class="fullDramaStat">
+        <label>Drama Status</label>
+        <select name="dramaStatus" class="dramaStat">
+            <option value="Planning To Watch">Planning to Watch</option>
+            <option value="Currently Watching">Currently Watching</option>
+            <option value="Already Watched">Already Watched</option>
+        </select>
+    </div>
+      <!-- <div class="form-group" style="margin: 20px;">
+        <label>Drama Status</label>
+        </br>
+        <select name="dramaStatus">
+            <option value="plan To watch">plan To watch</option>
+            <option value="currently watching">currently watching</option>
+            <option value="completed">completed"</option>
+        </select>
+    </div>   -->
 <div class="user-box">
     <!-- <input required="" name="progress" type="number"> -->
     <label>Rating</label>

@@ -1,6 +1,7 @@
 <style>
 body {
   background-color: #fdf1ec;
+  /* font-family: sans-serif; */
 }
 
 .wrapper {
@@ -18,10 +19,14 @@ body {
   float: left;
   height: 420px;
   width: 327px;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px; 
+
 }
 
 .product-img img {
   border-radius: 10px 0 0 10px;
+  object-fit: cover;
 }
 
 .product-info {
@@ -52,18 +57,11 @@ body {
 .product-text h2 {
   margin: 0 0 47px 38px;
   font-size: 13px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #a39f9f;
-  letter-spacing: 0.2em;
+
 }
 
 .product-text p {
-  height: 125px;
   margin: 0 0 0 38px;
-  font-family: 'Playfair Display', serif;
-  color: #8d8d8d;
   line-height: 1.7em;
   font-size: 15px;
   font-weight: lighter;
@@ -116,11 +114,16 @@ span {
   outline: none;
 }
 
+.product-price-btn button:hover {
+  background-color: #79b0a1;
+}
 
 .rate {
         float: left;
         height: 46px;
         padding: 0 10px;
+        position: relative;
+        left: 7%;
     }
     .rate:not(:checked) > input {
         position:absolute;
@@ -149,11 +152,22 @@ span {
     .rate > input:checked + label:hover ~ label,
     .rate > input:checked ~ label:hover,
     .rate > input:checked ~ label:hover ~ label,
-    .rate > label:hover ~ input:checked ~ label {
+    .rate > label:hover ~ input:checked ~ label 
+    
+    {
         color: #c59b08;
     }
-
-
+    
+    .heading {
+        position: relative;
+        left: 4%;
+        margin-top: 3%;
+        color: black;
+        font-weight: 700;
+    }
+    h1 {
+      font-family: sans-serif;
+    }
 </style>
 <script>
     // function myFunction() {
@@ -161,42 +175,53 @@ span {
     // }
     </script>
 
+<!-- <h2 class="heading">Edit this Drama!</h2> -->
 
 
     <div class="wrapper">
-        <div class="product-img">
-          <img src="/images/<%= item.image %>" height="420" width="327">
+        <div class="product-img"  style="background-image: url('/images/<%= item.image %>'); background-size: auto; background-position: center;">
         </div>
         <div class="product-info">
           <div class="product-text">
-            <h1><%= item.dramaName%></h1>
-            <h2><%= item.episodeNum%> Episodes </h2>
-            <!-- <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p> -->
-           <form id="star-form" method="POST" action="/lists/rating">
+            <h1 style="font-family: sans-serif; font-weight: 700; color: black;"><%= item.dramaName%></h1>
+            <h2 style="font-family: sans-serif; font-weight: 500; color: black;">Number of Episodes: <%= item.episodeNum%> </h2>
+            <p style="font-family: sans-serif; font-weight: 700; color: black; margin-top: -20px;"> Watch Status:</p>
+            <p  style="font-family: sans-serif; font-weight: 500; color: black;"><%= item.dramaStatus%></p>
+            <p style="font-family: sans-serif; font-weight: 700; color: black;"> Progress:</p>
+            <p  style="font-family: sans-serif; font-weight: 500; color: black;"><%= item.progress%></p>
+
+            <p style="font-family: sans-serif; font-weight: 700; color: black; margin-top: 0%;">Rating:</p>
             <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" <% if(item.score == 5){%>checked<%}%>/>
+                <input type="radio" id="star5" name="rate" value="5" <% if(item.rate == 5){%>checked<%}%>/>
                 <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" <% if(item.score == 4){%>checked<%}%>/>
+                <input type="radio" id="star4" name="rate" value="4" <% if(item.rate == 4){%>checked<%}%>/>
                 <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" <% if(item.score == 3){%>checked<%}%>/>
+                <input type="radio" id="star3" name="rate" value="3" <% if(item.rate == 3){%>checked<%}%>/>
                 <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" <% if(item.score == 2){%>checked<%}%>/>
+                <input type="radio" id="star2" name="rate" value="2" <% if(item.rate == 2){%>checked<%}%>/>
                 <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" <% if(item.score == 1){%>checked<%}%> />
+                <input type="radio" id="star1" name="rate" value="1" <% if(item.rate == 1){%>checked<%}%> />
                 <label for="star1" title="text">1 star</label>        
             </div>
             <input type="hidden" name='itemid' value="<%= item._id %>">
             <input type="button" onclick="myFunction()" value="save">
            </form>
+           
+           <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
           
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
        
         </div>
           
    
-        
-        <div class="load-bar" style="width: 70px; margin: 20px">
-          <div  id="fill"><p id="textfill"></p></div>
-        </div>
             <div class="product-price-btn">
                 <!-- <p><span>78</span>$</p> -->
                 <a>
