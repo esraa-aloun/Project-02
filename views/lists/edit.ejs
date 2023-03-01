@@ -1,183 +1,187 @@
 
 <!-- new -->
 <style>
-    body {
-      background-color: #fdf1ec;
-    }
-    
-    .wrapper {
-      height: 420px;
-      width: 800px;
-      margin: 50px auto;
-      border-radius: 10px;
-      /* VIA CSS MATIC https://goo.gl/cIbnS */
-      -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    }
-    
-    .product-img {
-      float: left;
-      height: 420px;
-      width: 327px;
-    }
-    
-    .product-img img {
-      border-radius: 10px 0 0 10px;
-    }
-    
-    .product-info {
-      float: right;
-      height: 420px;
-      width: 473px;
-      border-radius: 0 10px 10px 0px;
-      background-color: #ffffff;
-    }
-    
-    .product-text {
-      height: 300px;
-      width: 327px;
-    }
-    
-    .product-text h1 {
-      margin: 0 0 0 38px;
-      padding-top: 52px;
-      font-size: 34px;
-      color: #474747;
-    }
-    
-    .product-text h1,
-    .product-price-btn p {
-      font-family: 'Bentham', serif;
-    }
-    
-    .product-text h2 {
-      margin: 0 0 47px 38px;
-      font-size: 13px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #a39f9f;
-      letter-spacing: 0.2em;
-    }
-    
-    .product-text p {
-      height: 125px;
-      margin: 0 0 0 38px;
-      font-family: 'Playfair Display', serif;
-      color: #8d8d8d;
-      line-height: 1.7em;
-      font-size: 15px;
-      font-weight: lighter;
-      overflow: hidden;
-    }
-    
-    .product-price-btn {
-      height: 103px;
-      width: 327px;
-      margin-top: 17px;
-      position: relative;
-    }
-    
-    .product-price-btn p {
-      display: inline-block;
-      position: absolute;
-      top: -13px;
-      height: 50px;
-      font-family: 'Trocchi', serif;
-      margin: 0 0 0 38px;
-      font-size: 28px;
-      font-weight: lighter;
-      color: #474747;
-    }
-    
-    span {
-      display: inline-block;
-      height: 50px;
-      font-family: 'Suranna', serif;
-      font-size: 34px;
-    }
-    
-    .product-price-btn button {
-      /* float: right; */
-      display: inline-block;
-      height: 50px;
-      width: 176px;
-      margin: 0 40px 0 16px;
-      box-sizing: border-box;
-      border: transparent;
-      border-radius: 60px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #ffffff;
-      background-color: #9cebd5;
-      cursor: pointer;
-      outline: none;
-    }
-    
-    .product-price-btn button:hover {
-      background-color: #79b0a1;
-    }
-    
+  body {
+    background-color: #fdf1ec;
+  }
+  
+  .wrapper {
+    height: 420px;
+    width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .product-img img {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .product-info {
+    float: right;
+    height: 420px;
+    width: 473px;
+    border-radius: 0 10px 10px 0px;
+    background-color: #ffffff;
+  }
+  
+  .product-text {
+    height: 300px;
+    width: 327px;
+  }
+  
+  .product-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+  }
+  
+  .product-text h1,
+  .product-price-btn p {
+    font-family: 'Bentham', serif;
+  }
+  
+  .product-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a39f9f;
+    letter-spacing: 0.2em;
+  }
+  
+  .product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+  .product-price-btn {
+    height: 103px;
+    width: 327px;
+    margin-top: 17px;
+    position: relative;
+  }
+  
+  .product-price-btn p {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    font-family: 'Trocchi', serif;
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
+  }
+  
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
+  }
+  
+  .product-price-btn button {
+    /* float: right; */
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #9cebd5;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .product-price-btn button:hover {
+    background-color: #79b0a1;
+  }
+  
 
-    
-     
-    .rate {
-            float: left;
-            height: 46px;
-            padding: 0 10px;
-        }
-        .rate:not(:checked) > input {
-            position:absolute;
-            top:-9999px;
-        }
-        .rate:not(:checked) > label {
-            float:right;
-            width:1em;
-            overflow:hidden;
-            white-space:nowrap;
-            cursor:pointer;
-            font-size:30px;
-            color:#ccc;
-        }
-        .rate:not(:checked) > label:before {
-            content: '★ ';
-        }
-        .rate > input:checked ~ label {
-            color: #ffc700;    
-        }
-        .rate:not(:checked) > label:hover,
-        .rate:not(:checked) > label:hover ~ label {
-            color: #deb217;  
-        }
-        .rate > input:checked + label:hover,
-        .rate > input:checked + label:hover ~ label,
-        .rate > input:checked ~ label:hover,
-        .rate > input:checked ~ label:hover ~ label,
-        .rate > label:hover ~ input:checked ~ label {
-            color: #c59b08;
-        }
+  
+   
+  .rate {
+          float: left;
+          height: 46px;
+          padding: 0 10px;
+          position: relative;
+          left: 7%;
+          /* bottom: 5%; */
+      }
+      .rate:not(:checked) > input {
+          position:absolute;
+          top:-9999px;
+      }
+      .rate:not(:checked) > label {
+          float:right;
+          width:1em;
+          overflow:hidden;
+          white-space:nowrap;
+          cursor:pointer;
+          font-size:30px;
+          color:#ccc;
+      }
+      .rate:not(:checked) > label:before {
+          content: '★ ';
+      }
+      .rate > input:checked ~ label {
+          color: #ffc700;    
+      }
+      .rate:not(:checked) > label:hover,
+      .rate:not(:checked) > label:hover ~ label {
+          color: #deb217;  
+      }
+      .rate > input:checked + label:hover,
+      .rate > input:checked + label:hover ~ label,
+      .rate > input:checked ~ label:hover,
+      .rate > input:checked ~ label:hover ~ label,
+      .rate > label:hover ~ input:checked ~ label {
+          color: #c59b08;
+      }
 
-        /*input style*/
+      /*input style*/
 
-        /*
+      /*
 =====
 HELPERS
 =====
 */
 
 .ha-screen-reader{
-  width: var(--ha-screen-reader-width, 1px);
-  height: var(--ha-screen-reader-height, 1px);
-  padding: var(--ha-screen-reader-padding, 0);
-  border: var(--ha-screen-reader-border, none);
+width: var(--ha-screen-reader-width, 1px);
+height: var(--ha-screen-reader-height, 1px);
+padding: var(--ha-screen-reader-padding, 0);
+border: var(--ha-screen-reader-border, none);
 
-  position: var(--ha-screen-reader-position, absolute);
-  clip: var(--ha-screen-reader-clip, rect(1px, 1px, 1px, 1px));
-  overflow: var(--ha-screen-reader-overflow, hidden);
+position: var(--ha-screen-reader-position, absolute);
+clip: var(--ha-screen-reader-clip, rect(1px, 1px, 1px, 1px));
+overflow: var(--ha-screen-reader-overflow, hidden);
 }
 
 /*
@@ -187,25 +191,25 @@ RESET STYLES
 */
 
 .field__input{ 
-  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
-  
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
+--uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
 
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
+background-color: transparent;
+border-radius: 0;
+border: none;
 
-  font-family: inherit;
-  font-size: inherit;
+/* -webkit-appearance: none;
+-moz-appearance: none; */
+
+font-family: inherit;
+font-size: inherit;
 }
 
 .field__input:focus::-webkit-input-placeholder{
-  color: var(--uiFieldPlaceholderColor);
+color: var(--uiFieldPlaceholderColor);
 }
 
 .field__input:focus::-moz-placeholder{
-  color: var(--uiFieldPlaceholderColor);
+color: var(--uiFieldPlaceholderColor);
 }
 
 /*
@@ -215,93 +219,93 @@ CORE STYLES
 */
 
 .field{
-  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
-  --uiFieldPaddingRight: var(--fieldPaddingRight, 1rem);
-  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);   
-  --uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(22, 22, 22, 1));
+--uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+--uiFieldPaddingRight: var(--fieldPaddingRight, 1rem);
+--uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);   
+--uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(22, 22, 22, 1));
 
-  display: var(--fieldDisplay, inline-flex);
-  position: relative;
-  font-size: var(--fieldFontSize, 1rem);
+display: var(--fieldDisplay, inline-flex);
+position: relative;
+font-size: var(--fieldFontSize, 1rem);
 }
 
 .field__input{
-  box-sizing: border-box;
-  width: var(--fieldWidth, 100%);
-  height: var(--fieldHeight, 3rem);
-  padding: var(--fieldPaddingTop, 1.25rem) var(--uiFieldPaddingRight) var(--fieldPaddingBottom, .5rem) var(--uiFieldPaddingLeft);
-  border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, .25));  
+box-sizing: border-box;
+width: var(--fieldWidth, 100%);
+height: var(--fieldHeight, 3rem);
+padding: var(--fieldPaddingTop, 1.25rem) var(--uiFieldPaddingRight) var(--fieldPaddingBottom, .5rem) var(--uiFieldPaddingLeft);
+border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, .25));  
 }
 
 .field__input:focus{
-  outline: none;
+outline: none;
 }
 
 .field__input::-webkit-input-placeholder{
-  opacity: 0;
-  transition: opacity .2s ease-out;
+opacity: 0;
+transition: opacity .2s ease-out;
 }
 
 .field__input::-moz-placeholder{
-  opacity: 0;
-  transition: opacity .2s ease-out;
+opacity: 0;
+transition: opacity .2s ease-out;
 }
 
 .field__input:focus::-webkit-input-placeholder{
-  opacity: 1;
-  transition-delay: .2s;
+opacity: 1;
+transition-delay: .2s;
 }
 
 .field__input:focus::-moz-placeholder{
-  opacity: 1;
-  transition-delay: .2s;
+opacity: 1;
+transition-delay: .2s;
 }
 
 .field__label-wrap{
-  box-sizing: border-box;
-  pointer-events: none;
-  cursor: text;
+box-sizing: border-box;
+pointer-events: none;
+cursor: text;
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
 }
 
 .field__label-wrap::after{
-  content: "";
-  box-sizing: border-box;
-  width: 100%;
-  height: 0;
-  opacity: 0;
+content: "";
+box-sizing: border-box;
+width: 100%;
+height: 0;
+opacity: 0;
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
+position: absolute;
+bottom: 0;
+left: 0;
 }
 
 .field__input:focus ~ .field__label-wrap::after{
-  opacity: 1;
+opacity: 1;
 }
 
 .field__label{
-  position: absolute;
-  left: var(--uiFieldPaddingLeft);
-  top: calc(50% - .5em);
+position: absolute;
+left: var(--uiFieldPaddingLeft);
+top: calc(50% - .5em);
 
-  line-height: 1;
-  font-size: var(--fieldHintFontSize, inherit);
+line-height: 1;
+font-size: var(--fieldHintFontSize, inherit);
 
 
-  transition: top .2s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity .2s ease-out, font-size .2s ease-out;
+transition: top .2s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity .2s ease-out, font-size .2s ease-out;
 }
 
 .field__input:focus ~ .field__label-wrap .field__label,
 .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
-  --fieldHintFontSize: var(--fieldHintFontSizeFocused, .75rem);
+--fieldHintFontSize: var(--fieldHintFontSizeFocused, .75rem);
 
-  top: var(--fieldHintTopHover, .25rem);
+top: var(--fieldHintTopHover, .25rem);
 }
 
 /* 
@@ -309,8 +313,8 @@ effect 1
 */
 
 .field_v1 .field__label-wrap::after{
-  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
-  transition: opacity .2s ease-out;
+border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
+transition: opacity .2s ease-out;
 }
 
 
@@ -322,8 +326,8 @@ LEVEL 4. SETTINGS
 */
 
 .field{
-  --fieldBorderColor: #5a595d;
-  --fieldBorderColorActive: #5a595d;
+--fieldBorderColor: #5a595d;
+--fieldBorderColorActive: #5a595d;
 }
 
 /*
@@ -333,200 +337,175 @@ DEMO
 */
 
 body{
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
-  margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+margin: 0;
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
 }
 
 .page{
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 480px;
-  margin: auto;
-  padding: 1rem;
+box-sizing: border-box;
+width: 100%;
+max-width: 480px;
+margin: auto;
+padding: 1rem;
 
-  display: grid;
-  grid-gap: 30px;
+display: grid;
+grid-gap: 30px;
 }
 
 .linktr{
-  order: -1;
-  padding: 1.75rem;
-  text-align: center;
+order: -1;
+padding: 1.75rem;
+text-align: center;
 }
 
 .linktr__goal{
-  background-color: rgb(209, 246, 255);
-  color: rgb(8, 49, 112);
-  box-shadow: rgb(8 49 112 / 24%) 0px 2px 8px 0px;
-  border-radius: 2rem;
-  padding: .5rem 1.25rem;
+background-color: rgb(209, 246, 255);
+color: rgb(8, 49, 112);
+box-shadow: rgb(8 49 112 / 24%) 0px 2px 8px 0px;
+border-radius: 2rem;
+padding: .5rem 1.25rem;
 }
 
 @media (min-width: 1024px){
-  
-  .linktr{
-    position: absolute; 
-    right: 1rem; 
-    bottom: 1rem;
-  }
+
+.linktr{
+  position: absolute; 
+  right: 1rem; 
+  bottom: 1rem;
+}
 }
 
 .r-link{
-    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
-    --uirLinkTextColor: var(--rLinkTextColor);
-    --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+  --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+  --uirLinkTextColor: var(--rLinkTextColor);
+  --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
 
-    display: var(--uirLinkDisplay) !important;
-    color: var(--uirLinkTextColor) !important;
-    text-decoration: var(--uirLinkTextDecoration) !important;
+  display: var(--uirLinkDisplay) !important;
+  color: var(--uirLinkTextColor) !important;
+  text-decoration: var(--uirLinkTextDecoration) !important;
 }
 
+.editBtns {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+}
+  
+  </style>
+<script>
+  // function myFunction() {
+  //   document.getElementById("star-form").submit();
+  // }
+</script>
 
 
 
-
-    
-    </style>
-    <script>
-        // function myFunction() {
-        //   document.getElementById("star-form").submit();
-        // }
-    </script>
-    
-    
-    
-        <div class="wrapper">
-            <div class="product-img"  style="background-image: url('/images/<%= item.image %>'); background-size: auto; background-position: center;">
-              <!-- <img src="/images/<%= //item.image %>" height="420" width="327"> -->
-            </div>
-            <form method="POST" action="/lists/edit">
-                <input type="hidden" value="<%= item._id%>" name="id">
-            <div class="product-info">
-              <div class="product-text">
-                <h1 style="font-size: 10px; color: #474747; margin: 20px;">
-                    <div class="field field_v1">
-                        <label for="first-name" class="ha-screen-reader"><%= item.dramaName%></label>
-                        <input id="first-name" class="field__input" placeholder="Drama Name"  style="color: black;" name="dramaName" value='<%= item.dramaName%>'>
-                        <span class="field__label-wrap" aria-hidden="true">
-                          <span class="field__label"><%= item.dramaName%></span>
-                        </span>
-                    </div>
-                    
-                    
-                </h1>
-                <h6 style="font-size: 10px; color: #474747; margin: 20px;">
-                   
-                    <div class="field field_v1">
-                        <label for="first-name" class="ha-screen-reader"> <%= item.episodeNum%> Episodes </label>
-                        <input name='episodeNum' id="first-name" class="field__input" placeholder="Episodes Numbers" type="number" style="color: black;" value="<%= item.episodeNum%>">
-                        <span class="field__label-wrap" aria-hidden="true">
-                          <span class="field__label"><%= item.episodeNum%> Episodes</span>
-                        </span>
-                    </div>
-                
-                </h6>
-                <h6 style="font-size: 10px; color: #474747; margin: 20px;">
-                   
-                    <div class="field field_v1">
-                        <label for="first-name" class="ha-screen-reader"> <%= item.progress%> </label>
-                        <input name='episodeNum' id="first-name" class="field__input" placeholder="Episodes Numbers" type="number" style="color: black;" value="<%= item.progress%>">
-                        <span class="field__label-wrap" aria-hidden="true">
-                          <span class="field__label">You watched <%= item.progress%> Episodes</span>
-                        </span>
-                    </div>
-                
-                </h6>
-                <div class="form-group" style="margin: 20px;">
-                    <label>Drama Status</label>
-                    </br>
-                    <select name="dramaStatus">
-                        <option value="plan To watch" <% if(item.dramaStatus == 'plan To watch') {%>selected<%}%>>plan To watch</option>
-                        <option value="currently watching"  <% if (item.dramaStatus == 'currently watching') {%>selected<%}%>>currently watching</option>
-                        <option value="completed" <% if(item.dramaStatus == 'plan To watch') {%>selected<%}%> >completed</option>
-                    </select>
-                </div>  
-                  
-                <!-- <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p> -->
-                <!-- <form id="star-form">  -->
-                <div class="rate">
-                    <input type="radio" id="star5" name="rate" value="5" <% if(item.score == 5){%>checked<%}%>/>
-                    <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="rate" value="4" <% if(item.score == 4){%>checked<%}%>/>
-                    <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="rate" value="3" <% if(item.score == 3){%>checked<%}%>/>
-                    <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="rate" value="2" <% if(item.score == 2){%>checked<%}%>/>
-                    <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="rate" value="1" <% if(item.score == 1){%>checked<%}%> />
-                    <label for="star1" title="text">1 star</label>        
-                </div>
-                <!-- <input type="hidden" name='itemid' value="<%= //item._id %>"> -->
-                <!-- <input type="button" onclick="myFunction()" value="save"> -->
-               <!-- </form> -->
-               
-           
-       
-            
-            <!-- <div class="load-bar" style="width: 70px; margin: 20px">
-              <div  id="fill"><p id="textfill"></p></div>
-            </div> -->
-                <div class="product-price-btn">
-                    <!-- <p><span>78</span>$</p> -->
-                    <a   href="/lists/delete?id=<%= item._id%>">
-                    <button type="button" style="background-color: red;  width: 50px; float: right;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                    </svg>
-                    </button>
-                    </a>
-                    <!-- <a  href="/lists/edit?id=<%=// item._id%>"> -->
-                    <button type="submit" style="background-color: rgb(20, 137, 77); width: 150px; float: right;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                          </svg>
-                          <label style="font-size: 10px;">Save Changes</label>
-                        
-                       
-                    </button>
-                    <!-- </a> -->
-                 </form>
+  <div class="wrapper" >
+      <div class="product-img"  style="background-image: url('/images/<%= item.image %>'); background-size: auto; background-position: center;">
+        <!-- <img src="/images/<%= //item.image %>" height="420" width="327"> -->
+      </div>
+      <form method="POST" action="/lists/edit">
+          <input type="hidden" value="<%= item._id%>" name="id">
+      <div class="product-info" >
+        <div class="product-text" style="position: relative; bottom:10%">
+          <h1 style="font-size: 10px; color: #474747; margin: 20px;">
+              <div class="field field_v1" >
+                  <label for="first-name" class="ha-screen-reader"><%= item.dramaName%></label>
+                  <input style="font-family: sans-serif; font-weight: 500; color: black;" id="first-name" class="field__input" placeholder="Drama Name"  style="color: black;" name="dramaName" value='<%= item.dramaName%>'>
+                  <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label" style="font-family: sans-serif; font-weight: 700; color: black;">Drama Name</span>
+                  </span>
               </div>
-            </div>
+              
+              
+          </h1>
+          <h6 style="font-size: 10px; color: #474747; margin: 20px;">
+             
+              <div class="field field_v1">
+                  <label for="first-name" class="ha-screen-reader"> <%= item.episodeNum%> Episodes </label>
+                  <input style="font-family: sans-serif; font-weight: 500; color: black;" name='episodeNum' id="first-name" class="field__input" placeholder="Episodes Numbers" type="number" style="color: black;" value="<%= item.episodeNum%>">
+                  <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label" style="font-family: sans-serif; font-weight: 700; color: black;">Number of Episodes</span>
+                  </span>
+              </div>
+          
+          </h6>
+          <h6 style="font-size: 10px; color: #474747; margin: 20px;">
+             
+              <div class="field field_v1">
+                  <label for="first-name" class="ha-screen-reader"> <%= item.progress%> </label>
+                  <input style="font-family: sans-serif; font-weight: 500; color: black;" name='episodeNum' id="first-name" class="field__input" placeholder="Episodes Numbers" type="number" style="color: black;" value="<%= item.progress%>">
+                  <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label" style="font-family: sans-serif; font-weight: 700; color: black;">Episodes Watched </span>
+                  </span>
+              </div>
+          
+          </h6>
+          <div class="form-group" style="margin: 20px; position: relative; left: 5%;">
+              <label style="font-family: sans-serif; font-weight: 700; color: black; font-size: 12px;">Drama Status</label>
+              </br>
+              <select name="dramaStatus">
+                  <option value="Plan to Watch" <% if(item.dramaStatus == 'Plan to Watch') {%>selected<%}%>>Planning to Watch</option>
+                  <option value="currently Watching"  <% if (item.dramaStatus == 'Currently Watched') {%>selected<%}%>>Currently Watching</option>
+                  <option value="Already Watched" <% if(item.dramaStatus == 'Already Watched') {%>selected<%}%> >Already Watched</option>
+              </select>
+          </div>  
+            
+          <!-- <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p> -->
+          <!-- <form id="star-form">  -->
+            
+            <label style="font-family: sans-serif; font-weight: 700; color: black; font-size: 12px; position: absolute;left: 11%; bottom: -30px;">Rating</label>
+
+          <div class="rate">
+            
+              <input type="radio" id="star5" name="rate" value="5" <% if(item.score == 5){%>checked<%}%>/>
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" <% if(item.score == 4){%>checked<%}%>/>
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" <% if(item.score == 3){%>checked<%}%>/>
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" <% if(item.score == 2){%>checked<%}%>/>
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" <% if(item.score == 1){%>checked<%}%> />
+              <label for="star1" title="text">1 star</label>        
           </div>
-
-          <!-- <h1>Item Edit</h1>
-
-<form method="POST" action="/lists/edit">
-    <input type="hidden" value="<%=// item._id%>" name="id">
-<div>
-    <label>Drama Name</label>
-    <input name="dramaName" type="text" value="<%= //item.dramaName %>"/>
-</div>
-
-<div class="form-group">
-    <label>Episode Numbers</label>
-    <input name="episodeNum" type="number" value=""/>
+          <!-- <input type="hidden" name='itemid' value="<%= //item._id %>"> -->
+          <!-- <input type="button" onclick="myFunction()" value="save"> -->
+         <!-- </form> -->
+         
+     
+ 
+      
+      <!-- <div class="load-bar" style="width: 70px; margin: 20px">
+        <div  id="fill"><p id="textfill"></p></div>
+      </div> -->
+          <div class="product-price-btn" style=" display: flex; flex-direction: row-reverse; flex-flow: row-reverse; position: relative; left: 50%;">
+              <!-- <p><span>78</span>$</p> -->
+              <a   href="/lists/delete?id=<%= item._id%>">
+              <button type="button" style="background-color: red;  width: 50px; float: right;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>
+              </button>
+              </a>
+              
+              <!-- <a  href="/lists/edit?id=<%=// item._id%>"> -->
+              <button type="submit" style="background-color: rgb(20, 137, 77); width: 150px; float: right;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>
+                    <label style="font-size: 10px;">Save Changes</label>
+                  
+                  </div>
+              </button>
+              <!-- </a> -->
+           </form>
+        </div>
+      </div>
     </div>
-
-    <div class="form-group">
-    <label>Drama Status</label>
-    <select name="dramaStatus">
-        <option value="plan To watch">plan To watch</option>
-        <option value="currently watching">currently watching</option>
-        <option value="completed">completed"</option>
-    </select>
-    </div>   
-
-
-<br>
-<div>
-<button type="submit">Edit</button>
-</div>
-</form> -->
-       
