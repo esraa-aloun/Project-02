@@ -144,6 +144,7 @@ span {
  background: #f5f5f5;
  transition: box-shadow .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
  margin: 30px;
+ object-fit: cover;
 }
 
 .card-img {
@@ -227,14 +228,14 @@ p {
 <div class="cardcontainer">
 
     <% list.forEach(element => { %>
-  <div class="card"  style="background-image: url('/images/<%= element.image %>');"style="background-image: url('/images/profile-pic-1677584908993-27911619.jpg'); background-size: 150%;">
+  <div class="card"  style="background-image: url('/images/<%= element.image %>'); background-size: auto; background-position: center;">
     <div class="card-img">
  
     </div>
       <div class="card-info" >
         <div class="card-text">
           <p class="text-title"><%= element.dramaName%></p>
-          <p class="text-subtitle">Currently Watching</p>
+          <p class="text-subtitle"><%= element.dramaStatus%></p>
         </div>
         <div class="card-icon">
           <a href="/lists/showDetails?id=<%= element._id %>">
