@@ -30,6 +30,7 @@ exports.profile_edit_post = (req ,res) => {
 }
 
 exports.profile_upload_post = (req, res) => {
+    console.log('upload image', req.body)
     User.findByIdAndUpdate(req.user._id, {img : req.file.filename})
     .then(()=>{
         res.redirect('/profiles/show')
