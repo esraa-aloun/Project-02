@@ -224,12 +224,23 @@
     }
     </style>
 
+<style>
+    .heading {
+        position: relative;
+        left: 4%;
+        margin-top: 3%;
+        color: black;
+        font-weight: 700;
+    }
+</style>
 
 
 
+
+<h2 class="heading">Add to My List</h2>
 
 <div class="add-box">
-    <p>Add a Drama to Your List!</p>
+    <!-- <p>Add a Drama to Your List!</p> -->
     <form class="row g-3" method="POST" action="/lists/add">
       <div class="user-box">
         <input required="" name="dramaName" type="text">

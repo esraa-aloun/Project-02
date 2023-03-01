@@ -27,6 +27,7 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage })
+// router.post('/profile/addImg', profileControl.profile_upload_post)
 router.post('/profile/addImg', upload.single('profile-pic'), profileControl.profile_upload_post)
 
 //(req,res)=>{console.log(req.file.filename)}
