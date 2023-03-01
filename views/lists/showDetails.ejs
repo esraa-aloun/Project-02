@@ -116,27 +116,6 @@ span {
   outline: none;
 }
 
-.product-price-btn button:hover {
-  background-color: #79b0a1;
-}
-
-/*progress bar style*/
-
-.load-bar{
-   height:24px;
-   width:100px;
-   border-radius: 50px;
-   border: 1px solid gray;
-}
-#fill{
-    height:24px;
-    width:0;
-    border-radius: 50px;
-    background-color: gray;
-    font-size: small;
-   
-
-}
 
 .rate {
         float: left;
@@ -177,9 +156,9 @@ span {
 
 </style>
 <script>
-    function myFunction() {
-      document.getElementById("star-form").submit();
-    }
+    // function myFunction() {
+    //   document.getElementById("star-form").submit();
+    // }
     </script>
 
 
@@ -209,18 +188,7 @@ span {
             <input type="hidden" name='itemid' value="<%= item._id %>">
             <input type="button" onclick="myFunction()" value="save">
            </form>
-           
-           <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
           
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
        
         </div>
           

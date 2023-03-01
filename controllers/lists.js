@@ -7,6 +7,8 @@ const upload = multer({dest: 'public/uploads'})
 exports.list_addItem_get = (req, res) => {
     res.render('lists/add')
 }
+
+
 exports.list_addItem_post = (req, res) => {
      console.log(req.user._id)
      console.log(req.session.passport.user)
@@ -58,7 +60,7 @@ exports.list_addItem_post = (req, res) => {
 exports.list_show_get = (req, res) => {
 
 
-    Item.find().populate('owner')
+    Item.find({owner: req.user._id})
 
     
     .then(list => {
@@ -94,7 +96,7 @@ exports.list_editItem_post =(req, res) =>{
     Item.findByIdAndUpdate(itemId, req.body)
     .then((item)=> {
       
-        res.redirect('/lists/show',{item})
+        res.render('lists/showDetails',{item})
     
      })
        .catch( err => {

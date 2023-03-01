@@ -9,7 +9,7 @@ const ItemSchema = mongoose.Schema({
     dramaName: {type: String, required: true},
     episodeNum: {type: Number, required: true},
     progress: {type: Number, default: 0},
-    score:{type: Number, default: 0},
+    rate:{type: Number, default: 0},
     dramaStatus: {type: String , default: 'cw'}, 
     image: {type: String, default: 'default.png'}   
    
