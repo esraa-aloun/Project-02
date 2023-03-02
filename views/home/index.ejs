@@ -14,4 +14,180 @@
 
 
 
+
+
+<style>
+
+    
+
+
+    html {
+  background: rgb(203, 203, 203);
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px 0px -500px;
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }  
+  .item-1 {
+  grid-column: 1/ span 2;
+  }
+  .item-1 h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* card */
+
+.card {
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.card article {
+  padding: 20px;
+  display: flex;
+  
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card p { 
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 1.4;
+}
+
+/* typography */
+h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+    
+</style>
+
+
 <h2 class="heading">Hello, user!</h2>
+
+<div class="support-grid"></div>
+
+  <div class="band">
+    <div class="item-1">
+          <a href="https://www.animenewsnetwork.com/news/2023-02-28/26th-detective-conan-anime-film-trailer-reveals-previews-theme-song/.195439" class="card">
+            <div class="thumb" style="background-image: url(https://fictionhorizon.com/wp-content/uploads/2022/09/COnan.jpg);"></div>
+            <article>
+              <h1>26th Detective Conan Anime Film's Trailer Reveals</h1>
+              <span>See More</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-2">
+          <a href="https://www.animenewsnetwork.com/review/bungo-stray-dogs-season-4/episode-46/.195467" class="card">
+            <div class="thumb" style="background-image: url(https://www.animenewsnetwork.com/thumbnails/crop1200x630gGE/cms/news.5/190302/bungo-stray-dogs-22.jpg);"></div>
+            <article>
+              <h1>Bungo Stray Dogs Season 4</h1>
+              <p>The real-life Akiko Yosano could be said to have contradictory views of war. In the early 1900s, when her brother was fighting against Russia, Yosano was a pacifist, loudly against war. </p>
+              <span>Read More</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-3">
+      <a href="https://www.animenewsnetwork.com/news/2022-12-10/demon-slayer-anime-swordsmith-village-arc-premieres-in-april-with-1-hour-tv-special/.192798" class="card">
+        <div class="thumb" style="background-image: url(https://cdn.animenewsnetwork.com/thumbnails/max650x650/cms/news.6/192798/kimetsu_worldtour.jpg);"></div>
+        <article>
+          <h1>Demon Slayer Anime's Swordsmith Village Arc Premieres in April</h1>
+          <p>The special broadcast of Demon Slayer Kimetsu no Yaiba The Movie: Mugen Train ended on Saturday with an announcement that the franchise's upcoming Demon Slayer </p>
+          <span>Read More</span>
+        </article>
+      </a>
+    </div>
+    <div class="item-4">
+          <a href="https://www.latestanimenews.com/buddy-daddies-episode-8-review/" class="card">
+            <div class="thumb" style="background-image: url(https://wegotthiscovered.com/wp-content/uploads/2023/01/buddy-daddies-rei-miri-kazuki.jpg);"></div>
+            <article>
+              <h1>Buddy Daddies Episode 8 Review</h1>
+              <p>We begin with Rei leaving his room and running into Miri very early in the morning.</p>
+              <span>Feb 24, 23 20:32</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-5">
+          <a href="https://www.latestanimenews.com/top-6-craziest-plot-twists-in-attack-on-titan/" class="card">
+            <div class="thumb" style="background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/attack-on-titan-season-4-part-two-1648709560.jpg);"></div>
+            <article>
+              <h1>Top 6 Craziest Plot Twists In Attack On Titan</h1>
+              <span>Feb 27, 23 20:32</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-6">
+      <a href="https://www.latestanimenews.com/the-great-cleric-reached-2-5-million-copies-in-circulation/" class="card">
+        <div class="thumb" style="background-image: url(https://img1.ak.crunchyroll.com/i/spire3/592f9d663e55669bf023658f97f9af551665070321_main.jpg);"></div>
+        <article>
+          <h1>The Great Cleric reached 2.5 million copies in circulation</h1>
+          
+          <span>Feb 25, 23 20:32</span>
+        </article>
+      </a>
+    </div>
+    <div class="item-7">
+      <a href="https://www.latestanimenews.com/the-pokemon-company-unveils-two-new-characters-featuring-in-the-upcoming-series/" class="card">
+        <div class="thumb" style="background-image: url(https://pa1.narvii.com/5734/dc46654847a3404d33dcd7b06d0a4d5d760ac9f2_hq.gif);"></div>
+        <article>
+          <h1>The Pokemon Company Unveils Two New Characters Featuring In The Upcoming Series</h1>
+          <span>Feb 12, 23 20:32</span>
+        </article>
+      </a>
+    </div>
+  </div>
