@@ -203,28 +203,15 @@ span {
                 <input type="radio" id="star1" name="rate" value="1" <% if(item.rate == 1){%>checked<%}%> />
                 <label for="star1" title="text">1 star</label>        
             </div>
-            <input type="hidden" name='itemid' value="<%= item._id %>">
-            <input type="button" onclick="myFunction()" value="save">
-           </form>
-           
-           <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-          
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
+            </form>
+
        
         </div>
           
    
             <div class="product-price-btn">
                 <!-- <p><span>78</span>$</p> -->
-                <a>
+                <a href="/lists/delete?id=<%= item._id%>">
                 <button type="button" style="background-color: red;  width: 50px; float: right;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
